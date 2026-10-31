@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact - TaskFlow{% endblock %}
+
+{% block body %}
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+
+                    <h1 class="h3 mb-3">Contact</h1>
+
+                    <p class="text-secondary">
+                        Une question sur TaskFlow ?
+                        N'hésitez pas à nous contacter.
+                    </p>
+
+                    <div class="alert alert-info">
+                        <strong>Adresse e-mail :</strong>
+                        <a href="mailto:{{ email }}">
+                            {{ email }}
+                        </a>
+                    </div>
+
+                    <a href="{{ path('app_home') }}"
+                       class="btn btn-outline-primary">
+                        Retour à l'accueil
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

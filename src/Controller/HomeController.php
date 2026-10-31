@@ -17,7 +17,7 @@ final class HomeController extends AbstractController
         ]);
     }
 
-        #[Route('/apropos', name: 'app_about')]
+    #[Route('/apropos', name: 'app_about')]
     public function about(): Response
     {
         return $this->render('home/about.html.twig');
@@ -28,6 +28,14 @@ final class HomeController extends AbstractController
     {
         return $this->render('home/hello.html.twig', [
             'prenom' => $prenom,
+        ]);
+    }
+
+    #[Route('/contact', name: 'app_contact')]
+    public function contact(): Response
+    {
+        return $this->render('home/contact.html.twig', [
+            'email' => 'contact@taskflow.local',
         ]);
     }
 
